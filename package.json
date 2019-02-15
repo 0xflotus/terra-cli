@@ -6,6 +6,7 @@
   "author": "0xflotus <0xflotus@gmail.com>",
   "license": "MIT",
   "bin": {
-    "terra": "./index.js"
+    "terra": "./index.js",
+    "yn": "./index.js"
   }
 }
