@@ -4,9 +4,11 @@ const AMOUNT = parseInt(process.argv.slice(2)[1]) || 1;
 const CURRENCY = process.argv.slice(2)[0];
 
 try {
-  var APIKEY = require("./api.json").api_key;
+  const explorer = require("cosmiconfig")("terra-cli");
+  const loaded = explorer.loadSync(`${require("os").homedir}/.terrarc`).config;
+  var APIKEY = loaded.api_key;
 } catch (e) {
-  console.log("Please specify an api_key in api.json");
+  console.log("Please specify an api_key in ~/.terrarc");
   process.exit();
 }
 
