@@ -9,7 +9,12 @@ try {
   var APIKEY = loaded.api_key;
 } catch (e) {
   console.log("Please specify an api_key in ~/.terrarc");
-  process.exit();
+  process.exit(-1);
+}
+
+if ("EUR" === CURRENCY) {
+  console.log("Please do not use EUR");
+  process.exit(-1);
 }
 
 https.get(
