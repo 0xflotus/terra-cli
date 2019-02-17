@@ -4,7 +4,7 @@ exports.describe = "List API Statistics";
 
 exports.builder = () => {};
 
-exports.handler = argv => {
+exports.handler = _ => {
   require("https").get(
     `https://forex.1forge.com/1.0.3/quota?api_key=${require("./utils").getApiKey()}`,
     res => {
