@@ -31,6 +31,15 @@ const yargs = require("yargs")
   .example("$0 -f USD -t EUR -a 24")
   .example("$0 -t JPY")
   .epilog("Published under MIT LICENSE by 0xflotus 2019")
+  .parserConfiguration({
+    yargs: {
+      "short-option-groups": true,
+      "camel-case-expansion": true,
+      "dot-notation": true,
+      "parse-numbers": true,
+      "boolean-negation": true
+    }
+  })
   .parse();
 
 const AMOUNT = yargs.amount;
