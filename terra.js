@@ -1,7 +1,22 @@
 const https = require("https");
 
-const AMOUNT = parseInt(process.argv.slice(2)[1]) || 1;
-const CURRENCY = process.argv.slice(2)[0];
+const yargs = require("yargs")
+  .option("amount", {
+    alias: "a",
+    default: 1,
+    describe: "The quantity to convert"
+  })
+  .option("from", {
+    alias: "f",
+    default: "EUR",
+    describe: "The Source Currency"
+  })
+  .option("to", { alias: "t", default: "USD", describe: "The Target Currency" })
+  .parse();
+
+const AMOUNT = yargs.amount || yargs._[1];
+const TO_CURRENCY = yargs.to || yargs._[0];
+const FROM_CURRENCY = yargs.from;
 
 try {
   const explorer = require("cosmiconfig")("terra-cli");
@@ -12,16 +27,17 @@ try {
   process.exit(-1);
 }
 
-if ("EUR" === CURRENCY) {
-  console.log("Please do not use EUR");
-  process.exit(-1);
-}
-
 https.get(
-  `https://forex.1forge.com/1.0.3/convert?from=EUR&to=${CURRENCY}&quantity=${AMOUNT}&api_key=${APIKEY}`,
+  `https://forex.1forge.com/1.0.3/convert?from=${FROM_CURRENCY}&to=${TO_CURRENCY}&quantity=${AMOUNT}&api_key=${APIKEY}`,
   res => {
     res.on("data", d => {
-      console.log("%d EUR -> %d %s", AMOUNT, JSON.parse(d).value, CURRENCY);
+      console.log(
+        "%d %s -> %d %s",
+        AMOUNT,
+        FROM_CURRENCY,
+        JSON.parse(d).value.toFixed(2),
+        TO_CURRENCY
+      );
     });
   }
 );
