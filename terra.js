@@ -6,24 +6,28 @@ const yargs = require("yargs")
       alias: "amount",
       default: 1,
       describe: "The quantity to convert",
-      type: "number"
+      type: "number",
+      nargs: 1
     },
     f: {
       alias: "from",
       default: "EUR",
       describe: "The Source Currency",
-      type: "string"
+      type: "string",
+      nargs: 1
     },
     t: {
       alias: "to",
       default: "USD",
       describe: "The Target Currency",
-      type: "string"
+      type: "string",
+      nargs: 1
     }
   })
   .help("h")
   .alias("h", "help")
   .alias("V", "version")
+  .usage("Usage: $0 -f GBP -t EUR -a 23")
   .parse();
 
 const AMOUNT = yargs.amount || yargs._[1];
