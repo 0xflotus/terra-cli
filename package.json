@@ -1,6 +1,6 @@
 {
   "name": "terra-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "repository": "https://github.com/0xflotus/terra-cli.git",
   "author": "0xflotus <0xflotus@gmail.com>",
@@ -12,5 +12,10 @@
   "dependencies": {
     "cosmiconfig": "^5.0.7",
     "yargs": "^13.2.0"
+  },
+  "terra": {
+    "defFrom": "EUR",
+    "defTo": "USD",
+    "defAmount": 1
   }
 }

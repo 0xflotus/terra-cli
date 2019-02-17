@@ -1,24 +1,27 @@
 const https = require("https");
 
+const { defAmount, defFrom, defTo } = require("yargs")
+  .pkgConf("terra")
+  .parse();
 const yargs = require("yargs")
   .options({
     a: {
       alias: "amount",
-      default: 1,
+      default: defAmount,
       describe: "The quantity to convert",
       type: "number",
       nargs: 1
     },
     f: {
       alias: "from",
-      default: "EUR",
+      default: defFrom,
       describe: "The Source Currency",
       type: "string",
       nargs: 1
     },
     t: {
       alias: "to",
-      default: "USD",
+      default: defTo,
       describe: "The Target Currency",
       type: "string",
       nargs: 1
