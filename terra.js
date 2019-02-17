@@ -33,8 +33,8 @@ const yargs = require("yargs")
   .epilog("Published under MIT LICENSE by 0xflotus 2019")
   .parse();
 
-const AMOUNT = yargs.amount || yargs._[1];
-const TO_CURRENCY = yargs.to || yargs._[0];
+const AMOUNT = yargs.amount;
+const TO_CURRENCY = yargs.to;
 const FROM_CURRENCY = yargs.from;
 
 function handleError(message) {
