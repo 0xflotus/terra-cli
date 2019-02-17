@@ -34,6 +34,11 @@ const AMOUNT = yargs.amount || yargs._[1];
 const TO_CURRENCY = yargs.to || yargs._[0];
 const FROM_CURRENCY = yargs.from;
 
+if (FROM_CURRENCY === TO_CURRENCY) {
+  console.log("Please specify two different currencies");
+  process.exit(-1);
+}
+
 try {
   const explorer = require("cosmiconfig")("terra-cli");
   const loaded = explorer.loadSync(`${require("os").homedir}/.terrarc`).config;
