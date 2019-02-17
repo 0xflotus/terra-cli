@@ -44,28 +44,7 @@ const yargs = require("yargs")
       "boolean-negation": true
     }
   })
-  .command(
-    "stat",
-    "List API Statistics",
-    () => {},
-    argv => {
-      const APIKEY = getApiKey();
-      https.get(
-        `https://forex.1forge.com/1.0.3/quota?api_key=${APIKEY}`,
-        res => {
-          res.on("data", d => {
-            const data = JSON.parse(d);
-            console.log(
-              "There are %d API calls free in the next %d hours",
-              data.quota_remaining,
-              data.hours_until_reset
-            );
-            process.exit(0);
-          });
-        }
-      );
-    }
-  )
+  .command(require("./stat"))
   .parse();
 
 const AMOUNT = yargs.amount;
