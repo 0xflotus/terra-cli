@@ -37,9 +37,14 @@ const AMOUNT = yargs.amount || yargs._[1];
 const TO_CURRENCY = yargs.to || yargs._[0];
 const FROM_CURRENCY = yargs.from;
 
-if (FROM_CURRENCY === TO_CURRENCY) {
-  console.log("Please specify two different currencies");
+function handleError(message) {
+  console.log(message);
+  require("yargs").showHelp();
   process.exit(-1);
+}
+
+if (FROM_CURRENCY === TO_CURRENCY) {
+  handleError("Please specify two different currencies\n");
 }
 
 try {
@@ -47,8 +52,7 @@ try {
   const loaded = explorer.loadSync(`${require("os").homedir}/.terrarc`).config;
   var APIKEY = loaded.api_key;
 } catch (e) {
-  console.log("Please specify an api_key in ~/.terrarc");
-  process.exit(-1);
+  handleError("Please specify an api_key in ~/.terrarc\n");
 }
 
 https.get(
