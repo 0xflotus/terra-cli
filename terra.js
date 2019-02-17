@@ -5,14 +5,21 @@ const yargs = require("yargs")
     a: {
       alias: "amount",
       default: 1,
-      describe: "The quantity to convert"
+      describe: "The quantity to convert",
+      type: "number"
     },
     f: {
       alias: "from",
       default: "EUR",
-      describe: "The Source Currency"
+      describe: "The Source Currency",
+      type: "string"
     },
-    t: { alias: "to", default: "USD", describe: "The Target Currency" }
+    t: {
+      alias: "to",
+      default: "USD",
+      describe: "The Target Currency",
+      type: "string"
+    }
   })
   .help("h")
   .alias("h", "help")
