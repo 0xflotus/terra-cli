@@ -1,4 +1,5 @@
 const https = require("https");
+const { getApiKey, handleError } = require("./utils");
 
 const { defAmount, defFrom, defTo } = require("yargs")
   .pkgConf("terra")
@@ -43,32 +44,40 @@ const yargs = require("yargs")
       "boolean-negation": true
     }
   })
+  .command(
+    "stat",
+    "List API Statistics",
+    () => {},
+    argv => {
+      const APIKEY = getApiKey();
+      https.get(
+        `https://forex.1forge.com/1.0.3/quota?api_key=${APIKEY}`,
+        res => {
+          res.on("data", d => {
+            const data = JSON.parse(d);
+            console.log(
+              "There are %d API calls free in the next %d hours",
+              data.quota_remaining,
+              data.hours_until_reset
+            );
+            process.exit(0);
+          });
+        }
+      );
+    }
+  )
   .parse();
 
 const AMOUNT = yargs.amount;
 const TO_CURRENCY = yargs.to;
 const FROM_CURRENCY = yargs.from;
 
-function handleError(message) {
-  console.log(message);
-  require("yargs").showHelp();
-  process.exit(-1);
-}
-
 if (FROM_CURRENCY === TO_CURRENCY) {
   handleError("Please specify two different currencies\n");
 }
 
-try {
-  const explorer = require("cosmiconfig")("terra-cli");
-  const loaded = explorer.loadSync(`${require("os").homedir}/.terrarc`).config;
-  var APIKEY = loaded.api_key;
-} catch (e) {
-  handleError("Please specify an api_key in ~/.terrarc\n");
-}
-
 https.get(
-  `https://forex.1forge.com/1.0.3/convert?from=${FROM_CURRENCY}&to=${TO_CURRENCY}&quantity=${AMOUNT}&api_key=${APIKEY}`,
+  `https://forex.1forge.com/1.0.3/convert?from=${FROM_CURRENCY}&to=${TO_CURRENCY}&quantity=${AMOUNT}&api_key=${getApiKey()}`,
   res => {
     res.on("data", d => {
       console.log(
