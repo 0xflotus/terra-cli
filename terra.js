@@ -18,15 +18,10 @@ if ("EUR" === CURRENCY) {
 }
 
 https.get(
-  `https://forex.1forge.com/1.0.3/quotes?pairs=EUR${CURRENCY}&api_key=${APIKEY}`,
+  `https://forex.1forge.com/1.0.3/convert?from=EUR&to=${CURRENCY}&quantity=${AMOUNT}&api_key=${APIKEY}`,
   res => {
     res.on("data", d => {
-      console.log(
-        "%d EUR -> %d %s",
-        AMOUNT,
-        (JSON.parse(d)[0].bid * AMOUNT).toFixed(2),
-        CURRENCY
-      );
+      console.log("%d EUR -> %d %s", AMOUNT, JSON.parse(d).value, CURRENCY);
     });
   }
 );
