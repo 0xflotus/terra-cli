@@ -1,17 +1,22 @@
 const https = require("https");
 
 const yargs = require("yargs")
-  .option("amount", {
-    alias: "a",
-    default: 1,
-    describe: "The quantity to convert"
+  .options({
+    a: {
+      alias: "amount",
+      default: 1,
+      describe: "The quantity to convert"
+    },
+    f: {
+      alias: "from",
+      default: "EUR",
+      describe: "The Source Currency"
+    },
+    t: { alias: "to", default: "USD", describe: "The Target Currency" }
   })
-  .option("from", {
-    alias: "f",
-    default: "EUR",
-    describe: "The Source Currency"
-  })
-  .option("to", { alias: "t", default: "USD", describe: "The Target Currency" })
+  .help("h")
+  .alias("h", "help")
+  .alias("V", "version")
   .parse();
 
 const AMOUNT = yargs.amount || yargs._[1];
