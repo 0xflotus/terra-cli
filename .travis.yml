@@ -8,4 +8,4 @@ node_js:
 os:
   - "linux"
   - "osx"
-script: "node ."
+script: "API_KEY=$API_KEY node ."

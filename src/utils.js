@@ -5,6 +5,9 @@ function handleError(message) {
 }
 
 function getApiKey() {
+  if (process.env["API_KEY"]) {
+    return process.env["API_KEY"];
+  }
   try {
     const explorer = require("cosmiconfig")("terra-cli");
     const loaded = explorer.loadSync(`${require("os").homedir}/.terrarc`)
