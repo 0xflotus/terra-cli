@@ -1,33 +1,8 @@
-const https = require("https");
 const { getApiKey, handleError } = require("./utils");
+const { parserConfig, options } = require("./conf");
 
-const { defAmount, defFrom, defTo } = require("yargs")
-  .pkgConf("terra")
-  .parse();
 const yargs = require("yargs")
-  .options({
-    a: {
-      alias: "amount",
-      default: defAmount,
-      describe: "The quantity to convert",
-      type: "number",
-      nargs: 1
-    },
-    f: {
-      alias: "from",
-      default: defFrom,
-      describe: "The Source Currency",
-      type: "string",
-      nargs: 1
-    },
-    t: {
-      alias: "to",
-      default: defTo,
-      describe: "The Target Currency",
-      type: "string",
-      nargs: 1
-    }
-  })
+  .options(options)
   .help("h")
   .alias("h", "help")
   .alias("V", "version")
@@ -35,15 +10,7 @@ const yargs = require("yargs")
   .example("$0 -f USD -t EUR -a 24")
   .example("$0 -t JPY")
   .epilog("Published under MIT LICENSE by 0xflotus 2019")
-  .parserConfiguration({
-    yargs: {
-      "short-option-groups": true,
-      "camel-case-expansion": true,
-      "dot-notation": true,
-      "parse-numbers": true,
-      "boolean-negation": true
-    }
-  })
+  .parserConfiguration(parserConfig)
   .command(require("./stat"))
   .parse();
 
@@ -55,7 +22,7 @@ if (FROM_CURRENCY === TO_CURRENCY) {
   handleError("Please specify two different currencies\n");
 }
 
-https.get(
+require("https").get(
   `https://forex.1forge.com/1.0.3/convert?from=${FROM_CURRENCY}&to=${TO_CURRENCY}&quantity=${AMOUNT}&api_key=${getApiKey()}`,
   res => {
     res.on("data", d => {
