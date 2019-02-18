@@ -4,9 +4,7 @@ node_js:
   - "9"
   - "10"
   - "11"
-  - "latest"
 os:
   - "linux"
   - "osx"
-  - "windows"
 script: "API_KEY=$API_KEY node ."
