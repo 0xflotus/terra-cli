@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/0xflotus/terra-cli.svg?branch=master)](https://travis-ci.org/0xflotus/terra-cli)
+
 # terra-cli
 
 An exchange rate tool for the command line using the 1forge.com API.
