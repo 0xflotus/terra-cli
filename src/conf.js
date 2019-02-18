@@ -8,7 +8,7 @@ const parserConfig = {
   }
 };
 
-const { defAmount, defFrom, defTo } = require("yargs")
+const { defAmount, defFrom, defTo, currencies } = require("yargs")
   .pkgConf("terra")
   .parse();
 const options = {
@@ -35,4 +35,4 @@ const options = {
   }
 };
 
-module.exports = { parserConfig, options };
+module.exports = { parserConfig, options, currencies };

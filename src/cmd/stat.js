@@ -1,4 +1,4 @@
-exports.command = "stat";
+exports.command = ["stat", "st"];
 
 exports.describe = "List API Statistics";
 

@@ -13,6 +13,14 @@ exports.handler = argv => {
     );
   }
 
+  const currencies = Object.keys(require("../conf").currencies);
+  if (
+    currencies.indexOf(FROM_CURRENCY) === -1 ||
+    currencies.indexOf(TO_CURRENCY) === -1
+  ) {
+    require("../utils").handleError("You use an unsupported ISO 4217 Code\n");
+  }
+
   require("https").get(
     `https://forex.1forge.com/1.0.3/convert?from=${FROM_CURRENCY}&to=${TO_CURRENCY}&quantity=${AMOUNT}&api_key=${require("../utils").getApiKey()}`,
     res => {

@@ -8,5 +8,6 @@ require("yargs")
   .epilog("Published under MIT LICENSE by 0xflotus 2019")
   .parserConfiguration(require("./conf").parserConfig)
   .command(require("./cmd/stat"))
+  .command(require("./cmd/list"))
   .command(require("./cmd/default"))
   .parse();
