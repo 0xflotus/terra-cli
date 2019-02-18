@@ -6,7 +6,7 @@ exports.builder = () => {};
 
 exports.handler = _ => {
   require("https").get(
-    `https://forex.1forge.com/1.0.3/quota?api_key=${require("./utils").getApiKey()}`,
+    `https://forex.1forge.com/1.0.3/quota?api_key=${require("../utils").getApiKey()}`,
     res => {
       res.on("data", d => {
         const data = JSON.parse(d);
