@@ -4,7 +4,6 @@ const { parserConfig, options } = require("./conf");
 const yargs = require("yargs")
   .options(options)
   .help("h")
-  .alias("h", "help")
   .alias("V", "version")
   .usage("Usage: $0 -f [from] -t [to] -a [amount]")
   .example("$0 -f USD -t EUR -a 24")
