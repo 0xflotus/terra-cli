@@ -10,4 +10,4 @@ _Terra_ is the name of a possible world currency. See [Wikipedia](https://en.wik
 
 ### Default
 
-See `terra --help`
+See `terra -h`
