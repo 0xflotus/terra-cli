@@ -5,7 +5,7 @@ function handleError(message) {
 }
 
 function getApiKey() {
-  if (process.env["API_KEY"]) {
+  if ("API_KEY" in process.env) {
     return process.env["API_KEY"];
   }
   try {
