@@ -4,8 +4,8 @@ exports.builder = () => {};
 
 exports.handler = argv => {
   const AMOUNT = argv.amount;
-  const TO_CURRENCY = argv.to;
-  const FROM_CURRENCY = argv.from;
+  const TO_CURRENCY = argv.to.toUpperCase();
+  const FROM_CURRENCY = argv.from.toUpperCase();
 
   if (FROM_CURRENCY === TO_CURRENCY) {
     require("../utils").handleError(
