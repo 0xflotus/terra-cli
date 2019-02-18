@@ -13,10 +13,10 @@ exports.handler = argv => {
     );
   }
 
-  const currencies = Object.keys(require("../conf").currencies);
   if (
-    currencies.indexOf(FROM_CURRENCY) === -1 ||
-    currencies.indexOf(TO_CURRENCY) === -1
+    [FROM_CURRENCY, TO_CURRENCY].some(
+      currency => !Object.keys(require("../conf").currencies).includes(currency)
+    )
   ) {
     require("../utils").handleError("You use an unsupported ISO 4217 Code\n");
   }
