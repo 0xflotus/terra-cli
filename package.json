@@ -1,6 +1,6 @@
 {
   "name": "terra-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "repository": "https://github.com/0xflotus/terra-cli.git",
   "author": "0xflotus <0xflotus@gmail.com>",
