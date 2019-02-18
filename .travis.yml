@@ -5,4 +5,7 @@ node_js:
   - "10"
   - "11"
   - "latest"
-script: "yn"
+os:
+  - "linux"
+  - "osx"
+script: "node ."
