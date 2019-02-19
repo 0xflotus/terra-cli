@@ -1,6 +1,15 @@
 require("yargs")
   .options(require("./conf").options)
-  .help("h")
+  .help("h", "Show usage information")
+  .version("V", "Show version", require("../package.json").version)
+  .detectLocale(false)
+  .locale("en")
+  .fail(function(msg, err, { showHelp }) {
+    showHelp();
+    process.exit(-1);
+  })
+  .group(["from", "to", "a"], "Conversion:")
+  .wrap(require("yargs").terminalWidth())
   .alias("V", "version")
   .usage("Usage: $0 -f [from] -t [to] -a [amount]")
   .example("$0 -f USD -t EUR -a 24")

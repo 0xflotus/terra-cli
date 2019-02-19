@@ -32,6 +32,12 @@ const options = {
     describe: "The Target Currency",
     type: "string",
     nargs: 1
+  },
+  v: {
+    alias: ["verbose", "debug"],
+    describe: "Show debug information",
+    type: "boolean",
+    hidden: true
   }
 };
 

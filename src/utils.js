@@ -1,7 +1,11 @@
-function handleError(message) {
+const { showHelp, exit } = require("yargs");
+
+function handleError(message, help = true) {
   console.log(message);
-  require("yargs").showHelp();
-  process.exit(-1);
+  if (help) {
+    showHelp();
+  }
+  exit(-1);
 }
 
 function getApiKey() {
