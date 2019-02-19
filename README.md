@@ -16,7 +16,12 @@ _Terra_ is the name of a possible world currency. See [Wikipedia](https://en.wik
 `terra -f USD -t GBP -a 99`  
 `terra`  
 `terra -f GBP -a 4`  
+`terra -f btc`
 
 ### Usage
 
 See `terra -h`
+
+### Debug
+
+For debugging information use `terra -v`
