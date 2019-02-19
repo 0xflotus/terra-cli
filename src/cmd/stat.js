@@ -2,7 +2,7 @@ exports.command = ["stat", "st"];
 
 exports.describe = "List API Statistics";
 
-exports.builder = () => {};
+exports.builder = _yargs => {};
 
 exports.handler = _argv => {
   require("https").get(

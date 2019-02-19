@@ -4,7 +4,7 @@ exports.command = ["$0", "one"];
 
 exports.describe = "use 1forge.com API";
 
-exports.builder = () => {};
+exports.builder = _yargs => {};
 
 exports.handler = argv => {
   if (argv.verbose) {
