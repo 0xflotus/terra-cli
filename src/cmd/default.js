@@ -1,6 +1,8 @@
 const { handleError } = require("../utils");
 
-exports.command = "$0";
+exports.command = ["$0", "one"];
+
+exports.describe = "use 1forge.com API";
 
 exports.builder = () => {};
 
@@ -28,21 +30,25 @@ exports.handler = argv => {
   require("https").get(
     `https://forex.1forge.com/1.0.3/convert?from=${FROM_CURRENCY}&to=${TO_CURRENCY}&quantity=${AMOUNT}&api_key=${require("../utils").getApiKey()}`,
     res => {
-      res.on("data", d => {
-        try {
-          console.log(
-            "%d %s -> %d %s",
-            ...[
-              AMOUNT,
-              FROM_CURRENCY,
-              JSON.parse(d).value.toFixed(2),
-              TO_CURRENCY
-            ]
-          );
-        } catch (err) {
-          handleError("An error occurred after parsing the response\n");
-        }
-      });
+      res
+        .on("data", d => {
+          try {
+            console.log(
+              "%d %s -> %d %s",
+              ...[
+                AMOUNT,
+                FROM_CURRENCY,
+                JSON.parse(d).value.toFixed(2),
+                TO_CURRENCY
+              ]
+            );
+          } catch (_err) {
+            handleError("An error occurred after parsing the response\n");
+          }
+        })
+        .on("error", _err => {
+          handleError("An error occurred while fetching data", false);
+        });
     }
   );
 };
