@@ -22,6 +22,19 @@ _Terra_ is the name of a possible world currency. See [Wikipedia](https://en.wik
 
 See `terra -h`
 
+### List of currently supported currencies
+
+See `cat package.json | jq .terra.currencies`
+
+|   ISO-4217	|  Currency 	|
+|--:	|---	|
+|   	|   	|
+|   	|   	|
+|   	|   	|
+|   	|   	|
+|   	|   	|
+|   	|   	|
+
 ### Debug
 
 For debugging information use `terra -v`
