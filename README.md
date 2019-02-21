@@ -28,32 +28,32 @@ See `cat package.json | jq .terra.currencies`
 
 | ISO-4217 |       Currency       |
 | -------: | :------------------: |
-|      EUR |         Euro         |
-|      USD |      US Dollar       |
-|      GBP |    Pound Sterling    |
-|      JPY |     Japanese Yen     |
-|      CHF |     Swiss franc      |
 |      AUD |  Australian Dollar   |
-|      CAD |   Canadian Dollar    |
-|      NZD |  New Zealand Dollar  |
-|      SEK |    Swedish Krona     |
-|      NOK |   Norwegian Krone    |
-|      MXN |     Mexican Peso     |
-|      TRY |     Turkish Lira     |
-|      ZAR |  South African Rand  |
-|      CNH |   Chinese Renminbi   |
-|      XAU |  Troy ounce of gold  |
-|      XAG | Troy ounce of silver |
-|      SGD |   Singapore Dollar   |
-|      RUB |    Russian Ruble     |
-|      HKD |   Hong Kong Dollar   |
-|      DKK |     Danish Krone     |
-|      PLN |     Polish złoty     |
-|      BTC |       Bitcoin        |
-|      LTC |       Litecoin       |
-|      XRP |        Ripple        |
-|      DSH |       Dashcoin       |
 |      BCH |     Bitcoin Cash     |
+|      BTC |       Bitcoin        |
+|      CAD |   Canadian Dollar    |
+|      CHF |     Swiss franc      |
+|      CNH |   Chinese Renminbi   |
+|      DKK |     Danish Krone     |
+|      DSH |       Dashcoin       |
+|      EUR |         Euro         |
+|      GBP |    Pound Sterling    |
+|      HKD |   Hong Kong Dollar   |
+|      JPY |     Japanese Yen     |
+|      LTC |       Litecoin       |
+|      MXN |     Mexican Peso     |
+|      NOK |   Norwegian Krone    |
+|      NZD |  New Zealand Dollar  |
+|      PLN |     Polish złoty     |
+|      RUB |    Russian Ruble     |
+|      SEK |    Swedish Krona     |
+|      SGD |   Singapore Dollar   |
+|      TRY |     Turkish Lira     |
+|      USD |      US Dollar       |
+|      XAG | Troy ounce of silver |
+|      XAU |  Troy ounce of gold  |
+|      XRP |        Ripple        |
+|      ZAR |  South African Rand  |
 
 ### Debug
 
