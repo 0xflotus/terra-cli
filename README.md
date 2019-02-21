@@ -4,7 +4,7 @@
 
 An exchange rate tool for the command line using the [1forge.com](https://1forge.com) API.
 
-_Terra_ is the name of a possible world currency. See [Wikipedia](https://en.wikipedia.org/wiki/Terra_(currency))
+_Terra_ is the name of a possible world currency. See [Wikipedia](<https://en.wikipedia.org/wiki/Terra_(currency)>)
 
 ### Install
 
@@ -26,14 +26,34 @@ See `terra -h`
 
 See `cat package.json | jq .terra.currencies`
 
-|   ISO-4217	|  Currency 	|
-|--:	|---	|
-|   	|   	|
-|   	|   	|
-|   	|   	|
-|   	|   	|
-|   	|   	|
-|   	|   	|
+| ISO-4217 | Currency             |
+| -------: | -------------------- |
+|      EUR | Euro                 |
+|      USD | US Dollar            |
+|      GBP | Pound Sterling       |
+|      JPY | Japanese Yen         |
+|      CHF | Swiss franc          |
+|      AUD | Australian Dollar    |
+|      CAD | Canadian Dollar      |
+|      NZD | New Zealand Dollar   |
+|      SEK | Swedish Krona        |
+|      NOK | Norwegian Krone      |
+|      MXN | Mexican Peso         |
+|      TRY | Turkish Lira         |
+|      ZAR | South African Rand   |
+|      CNH | Chinese Renminbi     |
+|      XAU | Troy ounce of gold   |
+|      XAG | Troy ounce of silver |
+|      SGD | Singapore Dollar     |
+|      RUB | Russian Ruble        |
+|      HKD | Hong Kong Dollar     |
+|      DKK | Danish Krone         |
+|      PLN | Polish złoty         |
+|      BTC | Bitcoin              |
+|      LTC | Litecoin             |
+|      XRP | Ripple               |
+|      DSH | Dashcoin             |
+|      BCH | Bitcoin Cash         |
 
 ### Debug
 
