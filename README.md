@@ -2,13 +2,13 @@
 
 # terra-cli
 
-An exchange rate tool for the command line using the [1forge.com](https://1forge.com) API.
+An exchange rate tool for the command line using the [1forge.com][1] API.
 
-_Terra_ is the name of a possible world currency. See [Wikipedia](<https://en.wikipedia.org/wiki/Terra_(currency)>)
+_Terra_ is the name of a possible world currency. See [Wikipedia][2]
 
 ### Install
 
-`npm i -g terra-cli` or `yarn global add terra-cli` or download the [latest](https://github.com/0xflotus/terra-cli/releases/latest) binary.
+`npm i -g terra-cli` or `yarn global add terra-cli` or download the [latest][3] binary.
 
 ### Examples
 
@@ -58,3 +58,7 @@ See `cat package.json | jq .terra.currencies`
 ### Debug
 
 For debugging information use `terra -v`
+
+[1]: https://1forge.com
+[2]: <https://en.wikipedia.org/wiki/Terra_(currency)>
+[3]: https://github.com/0xflotus/terra-cli/releases/latest
