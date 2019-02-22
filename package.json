@@ -13,6 +13,12 @@
     "cosmiconfig": "^5.0.7",
     "yargs": "^13.2.0"
   },
+  "keywords": [
+    "exchange rate",
+    "conversion",
+    "terra",
+    "currency"
+  ],
   "terra": {
     "defFrom": "EUR",
     "defTo": "USD",
