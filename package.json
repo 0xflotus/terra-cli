@@ -10,8 +10,8 @@
     "yn": "./index.js"
   },
   "dependencies": {
-    "cosmiconfig": "^5.0.7",
-    "yargs": "^13.2.0"
+    "cosmiconfig": "^5.2.0",
+    "yargs": "^13.2.2"
   },
   "keywords": [
     "exchange rate",
