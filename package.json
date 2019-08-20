@@ -10,7 +10,7 @@
     "yn": "./index.js"
   },
   "dependencies": {
-    "cosmiconfig": "^5.2.0",
+    "cosmiconfig": "^5.2.1",
     "yargs": "^14.0.0"
   },
   "keywords": [
