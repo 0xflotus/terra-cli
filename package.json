@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "cosmiconfig": "^5.2.0",
-    "yargs": "^13.2.2"
+    "yargs": "^14.0.0"
   },
   "keywords": [
     "exchange rate",
