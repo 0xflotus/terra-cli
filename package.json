@@ -1,17 +1,27 @@
 {
   "name": "terra-cli",
-  "version": "1.0.9",
-  "main": "index.js",
+  "version": "2.0.0",
+  "main": "dist/index.js",
   "repository": "https://github.com/0xflotus/terra-cli.git",
   "author": "0xflotus <0xflotus@gmail.com>",
   "license": "MIT",
   "bin": {
-    "terra": "./index.js",
-    "yn": "./index.js"
+    "terra": "./dist/index.js",
+    "yn": "./dist/index.js"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "cosmiconfig": "^5.2.1",
-    "yargs": "13.3.0"
+    "yargs": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cosmiconfig": "^5.0.3",
+    "@types/yargs": "^13.0.2",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "build": "tsc"
   },
   "keywords": [
     "exchange rate",
@@ -20,36 +30,41 @@
     "currency"
   ],
   "terra": {
-    "defFrom": "EUR",
-    "defTo": "USD",
-    "defAmount": 1,
-    "currencies": {
-      "EUR": "Euro",
-      "USD": "US Dollar",
-      "GBP": "Pound Sterling",
-      "JPY": "Japanese Yen",
-      "CHF": "Swiss franc",
-      "AUD": "Australian Dollar",
-      "CAD": "Canadian Dollar",
-      "NZD": "New Zealand Dollar",
-      "SEK": "Swedish Krona",
-      "NOK": "Norwegian Krone",
-      "MXN": "Mexican Peso",
-      "TRY": "Turkish Lira",
-      "ZAR": "South African Rand",
-      "CNH": "Chinese Renminbi",
-      "XAU": "Troy ounce of gold",
-      "XAG": "Troy ounce of silver",
-      "SGD": "Singapore Dollar",
-      "RUB": "Russian Ruble",
-      "HKD": "Hong Kong Dollar",
-      "DKK": "Danish Krone",
-      "PLN": "Polish złoty",
-      "BTC": "Bitcoin",
-      "LTC": "Litecoin",
-      "XRP": "Ripple",
-      "DSH": "Dashcoin",
-      "BCH": "Bitcoin Cash"
-    }
+    "currencies": [
+      "EUR",
+      "CAD",
+      "HKD",
+      "ISK",
+      "PHP",
+      "DKK",
+      "HUF",
+      "CZK",
+      "AUD",
+      "RON",
+      "SEK",
+      "IDR",
+      "INR",
+      "BRL",
+      "RUB",
+      "HRK",
+      "JPY",
+      "THB",
+      "CHF",
+      "SGD",
+      "PLN",
+      "BGN",
+      "TRY",
+      "CNY",
+      "NOK",
+      "NZD",
+      "ZAR",
+      "USD",
+      "MXN",
+      "ILS",
+      "GBP",
+      "KRW",
+      "MYR"
+    ],
+    "baseUrl": "https://api.exchangeratesapi.io/latest"
   }
 }
