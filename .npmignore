@@ -1,2 +1,5 @@
 yarn*
 .travis.yml
+src
+.gitignore
+tsconfig.json
