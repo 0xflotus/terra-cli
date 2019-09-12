@@ -6,4 +6,4 @@ node_js:
 os:
   - "linux"
   - "osx"
-script: "API_KEY=$API_KEY node ."
+script: "yarn build && node ."
