@@ -1,6 +1,6 @@
 {
   "name": "terra-cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/index.js",
   "repository": "https://github.com/0xflotus/terra-cli.git",
   "author": "0xflotus <0xflotus@gmail.com>",
@@ -12,13 +12,13 @@
   "dependencies": {
     "axios": "^0.19.0",
     "cosmiconfig": "^5.2.1",
-    "yargs": "^14.0.0"
+    "yargs": "^14.2.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/cosmiconfig": "^5.0.3",
-    "@types/yargs": "^13.0.2",
-    "typescript": "^3.6.3"
+    "@types/yargs": "^13.0.3",
+    "typescript": "^3.6.4"
   },
   "scripts": {
     "build": "tsc"
