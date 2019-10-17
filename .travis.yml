@@ -3,6 +3,9 @@ node_js:
   - "8"
   - "10"
   - "11"
+arch:
+  - amd64
+  - arm64
 os:
   - "linux"
   - "osx"
