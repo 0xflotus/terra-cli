@@ -33,6 +33,5 @@ matrix:
      node_js: 11
    - os: osx
      node_js: 12
-   - os: windows
-     node_js: 10
+     arch: arm64
 script: "yarn build && node ."
