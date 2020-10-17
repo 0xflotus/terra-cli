@@ -23,7 +23,7 @@ import axios from 'axios';
     }
 
     if (!(supportedCurrencies.includes(argv.f) && supportedCurrencies.includes(argv.t))) {
-        console.log("You provided an not supported currency.");
+        console.log("You provided an unsupported currency.");
         process.exit(403);
     }
 
