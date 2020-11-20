@@ -3,7 +3,7 @@ import * as cosmiconfig from 'cosmiconfig';
 import axios from 'axios';
 
 (async function () {
-    const explorer: cosmiconfig.Explorer = cosmiconfig('terra');
+    const explorer = cosmiconfig.cosmiconfig('terra');
     const { config } = await explorer.search();
     const supportedCurrencies: string[] = config.currencies;
 
