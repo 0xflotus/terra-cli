@@ -9,5 +9,9 @@ os:
   - 'osx'
   - 'windows'
   - 'freebsd'
-
+jobs:
+  allow_failures:
+  - os:
+    - 'windows'
+    - 'freebsd'
 script: "yarn build && node ."
