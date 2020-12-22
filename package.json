@@ -10,7 +10,7 @@
     "yn": "./dist/index.js"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "cosmiconfig": "^7.0.0",
     "yargs": "^16.2.0"
   },
