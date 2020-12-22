@@ -11,7 +11,8 @@ os:
   - 'freebsd'
 jobs:
   allow_failures:
-  - os:
-    - 'windows'
-    - 'freebsd'
+    - os: 
+      - windows
+    - os: 
+      - freebsd
 script: "yarn build && node ."
