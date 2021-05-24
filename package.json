@@ -18,7 +18,7 @@
     "@types/axios": "^0.14.0",
     "@types/cosmiconfig": "^6.0.0",
     "@types/node": "^15.6.0",
-    "@types/yargs": "^16.0.2",
+    "@types/yargs": "^17.0.0",
     "typescript": "^4.2.4"
   },
   "scripts": {
