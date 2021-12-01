@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "cosmiconfig": "^7.0.1",
-    "yargs": "^17.2.1"
+    "yargs": "^17.3.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
