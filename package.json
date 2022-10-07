@@ -17,7 +17,7 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/cosmiconfig": "^6.0.0",
-    "@types/node": "^18.7.23",
+    "@types/node": "^18.8.3",
     "@types/yargs": "^17.0.12",
     "typescript": "^4.8.4"
   },
