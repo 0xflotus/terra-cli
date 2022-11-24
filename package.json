@@ -12,13 +12,13 @@
   "dependencies": {
     "axios": "^1.2.0",
     "cosmiconfig": "^8.0.0",
-    "yargs": "^17.5.1"
+    "yargs": "^17.6.2"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/cosmiconfig": "^6.0.0",
     "@types/node": "^18.11.9",
-    "@types/yargs": "^17.0.12",
+    "@types/yargs": "^17.0.14",
     "typescript": "^4.9.3"
   },
   "scripts": {
