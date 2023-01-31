@@ -19,7 +19,7 @@
     "@types/cosmiconfig": "^6.0.0",
     "@types/node": "^18.11.18",
     "@types/yargs": "^17.0.21",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "scripts": {
     "build": "tsc"
